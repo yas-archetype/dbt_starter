@@ -36,7 +36,6 @@ dbt_starter/
 
 #### `models/`
 - `raw/`: Contains source definitions and initial data models
-  - `sap_sources.yml`: Defines SAP source tables and their configurations
 - `int/`: Intermediate transformations
   - Located in `int` database
   - Complex business logic and transformations
@@ -44,13 +43,6 @@ dbt_starter/
   - Located in `pres` database
   - Final models for end-user consumption
 
-#### `snowflake/`
-- `ci_cd.sql`: CI/CD related Snowflake objects
-- `database_warehouse.sql`: Database and warehouse setup
-- `fivetran.sql`: Fivetran integration configuration
-- `network_policy.sql`: Network security policies
-- `resource_monitor.sql`: Resource monitoring setup
-- `rbac.sql`: Role-based access control configuration
 
 #### `macros/`
 - Custom SQL functions and transformations
@@ -310,17 +302,3 @@ Add custom macros in `macros/` directory to automate and standardize tasks. Ther
    dbt run --target prod
    dbt test --target prod
    ```
-
-### Automated Deployment (Bitbucket Pipeline)
-
-The pipeline configuration is defined in `bitbucket-pipelines.yml` and the profile configuration for the CI/CD service user is defined in `cicd/`. The environment variables are added as repository variables in Bitbucket.
-
-1. **Scheduled Runs**
-   - Daily at 7 AM PST
-   - Production environment
-   - Full model run to update production tables
-
-2. **Manual Triggers**
-   - Environment selection
-   - Full or partial runs
-   - Test runs
