@@ -1,6 +1,6 @@
 dbt_starter:
   outputs:
-    dev:
+    starter_dev:
       account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
       database: "{{ env_var('SNOWFLAKE_DATABASE') }}"
       private_key_path: "{{ env_var('SNOWFLAKE_PRIVATE_KEY_PATH') }}"
@@ -11,6 +11,6 @@ dbt_starter:
       type: "snowflake"
       user: "{{ env_var('SNOWFLAKE_USER') }}"
       warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE') }}"
-  target: dev
+  target: starter_dev
       
 

@@ -1,0 +1,8 @@
+version: 2
+data_tests:
+  - name: assert_gender_sum_equals_total
+    description: >
+      Validates that the total number of students equals the sum of female, male, and unknown gender student counts.
+  - name: assert_race_sum_equals_total
+    description: >
+      Validates that the reported total student count matches the sum of individual race category counts.

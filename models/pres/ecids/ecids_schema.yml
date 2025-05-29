@@ -1,0 +1,113 @@
+
+version: 2
+
+models:  
+  - name: public_postsecondary_enrollment_report    
+    description: A report that shows the number of enrollments in public post-secondary institutions from 2014 broken down by race and gender.
+    columns:
+      - name: segment
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_to_exist
+        description: Segment
+      - name: institution
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_have_consistent_casing
+        description: Public Institution Name
+      - name: fall_enrolled_at_year
+        tests:
+          - not_null
+        description: Year (Fall Term)
+      - name: student_count
+        tests:
+          - not_null
+        description: Total Student Count
+      - name: female_count
+        tests:
+          - not_null
+        description: Female Count
+      - name: female_percentage
+        tests:
+          - not_null
+        description: Female Percent (Percent of Total)
+      - name: male_count
+        tests:
+          - not_null
+        description: Male Count
+      - name: male_percentage
+        tests:
+          - not_null
+        description: Male Percent (Percent of Total)
+      - name: unknown_gender_count
+        tests:
+          - not_null
+        description: Unknown Gender Count
+      - name: unknown_gender_percentage
+        tests:
+          - not_null
+        description: Unknown Gender Percent (Percent of Total)
+      - name: american_indian_count
+        tests:
+          - not_null
+        description: American Indian or Alaskan Native Count
+      - name: american_indian_percentage
+        tests:
+          - not_null
+        description: American Indian or Alaskan Native Percent (Percent of Total)
+      - name: asian_pacific_count
+        tests:
+          - not_null
+        description: Asian American or Pacific Islander Count
+      - name: asian_pacific_percentage
+        tests:
+          - not_null
+        description: Asian American or Pacific Islander Percent (Percent of Total)
+      - name: african_american_count
+        tests:
+          - not_null
+        description: Black or African American Count
+      - name: african_american_percentage
+        tests:
+          - not_null
+        description: Black or African American Percent (Percent of Total)
+      - name: hispanic_latino_count
+        tests:
+          - not_null
+        description: Hispanic or Latino Count
+      - name: hispanic_latino_percentage
+        tests:
+          - not_null
+        description: Hispanic or Latino Percent (Percent of Total)
+      - name: us_non_resident_count
+        tests:
+          - not_null
+        description: U.S. Non-Resident Count
+      - name: us_non_resident_percentage
+        tests:
+          - not_null
+        description: U.S. Non-Resident Percent (Percent of Total)
+      - name: multi_race_count
+        tests:
+          - not_null
+        description: Multiracial Count
+      - name: multi_race_percentage
+        tests:
+          - not_null
+        description: Multiracial Percent (Percent of Total)
+      - name: unknown_race_count
+        tests:
+          - not_null
+        description: Unknown Race Count
+      - name: unknown_race_percentage
+        tests:
+          - not_null
+        description: Unknown Race Percent (Percent of Total)
+      - name: white_count
+        tests:
+          - not_null
+        description: White Count
+      - name: white_percentage
+        tests:
+          - not_null
+        description: White Percent (Percent of Total)

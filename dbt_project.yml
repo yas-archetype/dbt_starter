@@ -33,9 +33,31 @@ models:
   dbt_starter:
     int:
       +database: int
-      +materialized: view
-      sap:
-        +schema: sap
+      +materialized: table
+      +transient: false
+      ecids:
+        +schema: ecids
     pres:
       +database: pres
-      +materialized: view
+      +materialized: table
+      +transient: false
+      ecids:
+        +schema: ecids
+    share:
+      +database: pres
+      +materialized: table
+      +transient: false
+      ecids:
+        +schema: ecids_share
+
+seeds:
+  dbt_starter: 
+    +database: raw
+    +schema: ecids
+
+data_tests:
+  +database: governance
+  +store_failures: true
+
+vars:  
+  'dbt_date:time_zone': 'America/Los_Angeles'

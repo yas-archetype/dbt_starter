@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: ecids
+    database: "{{ target.name }}_raw"
+    schema: ecids     
+    tables:
+      - name: public_postsecondary_enrollment
+        columns:
+          - name: institution
+            tests:
+              - not_null          
+          - name: segment
+            tests:
+              - accepted_values:
+                  values: ['Community Colleges', 'State Universities', 'University of Massachusetts']    
+      
+

@@ -1,0 +1,5 @@
+version: 2
+data_tests:
+  - name: assert_percentage_sum_equals_one
+    description: >
+      Validates that the sum of race category percentages equals 1.
