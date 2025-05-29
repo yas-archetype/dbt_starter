@@ -1,0 +1,34 @@
+version: 2
+
+sources:
+  - name: sap
+    database: "{{ target.name }}_raw"
+    schema: sap_sample     
+    tables:
+      - name: ZTBLCHANNELSALESBOOKINGS             
+      - name: KNVP
+      - name: KNA1
+      - name: MAKT
+      - name: J_3ACOLRT
+      - name: TWEWT
+      - name: MARA
+      - name: TVM1T
+      - name: TVM2T 
+      - name: TVM3T 
+      - name: ZSTYLEDESC
+      - name: TVM4T
+      - name: J_3ASEANT
+      - name: TVM5T
+      - name: TVV1T
+      - name: ZFI_PERIOD_DATES
+      - name: MVKE
+      - name: KNVV
+      - name: LIG_ZMM_C8_ECOMM_VIEW_ITEM_LEVEL
+      - name: J_3AMSEA
+      - name: ZTBLCHANNELSALESBOOKINGS_STAGE
+      - name: ZVWEBSALES
+      - name: VBAK
+      - name: VBUP
+      - name: ZMATERIALSEASONVALIDITY
+      
+
